@@ -32,6 +32,16 @@ pip install "cellSAM[napari] @ git+https://github.com/vanvalenlab/cellSAM@master
 To launch the napari app, run `cellsam napari`.
 For further details, check out the [napari plugin docs](https://vanvalenlab.github.io/cellSAM/napari.html)
 
+If you encounter issues with this installation, please follow the setup from source below:
+
+```
+conda create --name cellsam_napari -c conda-forge napari
+conda activate cellsam_napari
+conda install -c conda-forge pyqt
+pip install .[napari]
+```
+
+
 ## Citation
 
 Please cite us if you use CellSAM.
