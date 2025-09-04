@@ -58,7 +58,7 @@ def get_model(model="cellsam_general", version=None) -> nn.Module:
 
     Parameters
     ----------
-    model : str, default="cellsam_optimized"
+    model : str, default="cellsam_general"
        Which model to load. Options include:
 
         - ``"cellsam_general"``
