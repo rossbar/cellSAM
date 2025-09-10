@@ -461,7 +461,7 @@ Similarly, the decompression is comuptationally intensive, and may benefit from 
 decompression algorithms.
 Here’s an example incantation which will store the unpacked dataset to <code class="docutils literal notranslate"><span class="pre">/data</span></code> using 8
 threads for decompression:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tar<span class="w"> </span>--use-compress-program<span class="o">=</span><span class="s2">&quot;unpigz -p 8&quot;</span><span class="w"> </span><span class="nv">$HOME</span>/.deepcell/datasets/cellsam-data_v1.2.tar.gz<span class="w"> </span>-C<span class="w"> </span>/data
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tar<span class="w"> </span>--use-compress-program<span class="o">=</span><span class="s2">&quot;unpigz -p 8&quot;</span><span class="w"> </span>-xf<span class="w"> </span><span class="nv">$HOME</span>/.deepcell/datasets/cellsam-data_v1.2.tar.gz<span class="w"> </span>-C<span class="w"> </span>/data
 </pre></div>
 </div>
 <p>The unpacked data will then be available at <code class="docutils literal notranslate"><span class="pre">/data/cellsam_v1.2</span></code>.</p>
@@ -470,8 +470,12 @@ threads for decompression:</p>
 </section>
 <section id="running-the-evaluation">
 <h2>Running the evaluation<a class="headerlink" href="#running-the-evaluation" title="Link to this heading">#</a></h2>
-<p>Once all of the above steps are complete, the evaluation can be run via the <code class="docutils literal notranslate"><span class="pre">all_runsh.sh</span></code>
-shell script:</p>
+<p>Once all of the above steps are complete, the evaluation can be run via the <code class="docutils literal notranslate"><span class="pre">all_run.sh</span></code>
+shell script.
+Before running, ensure that the variables at the top of the file reflect the locations of
+the models/dataset on your system.
+If you used the defaults in all the steps above (and unpacked the dataset in its
+download location) this will already be the case.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./all_runs.sh
 </pre></div>
 </div>
