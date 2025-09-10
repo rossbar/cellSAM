@@ -48,7 +48,8 @@ Citation
    :hidden:
 
    tutorial
+   API-key
    reference/index
    auto_examples/index
    napari
-
+   reproducibility
